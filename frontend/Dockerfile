@@ -1,7 +1,7 @@
 #----stage 1----
 FROM node:alpine AS builder
-WORKDIR /app/dist
-COPY package.json package-lock.json /app/
+WORKDIR /app
+COPY package.json package-lock.json . /
 RUN npm ci
 ENV chatt=prodution
 COPY . .
